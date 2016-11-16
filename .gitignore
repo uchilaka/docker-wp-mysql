@@ -1,0 +1,4 @@
+private
+
+# Ignore stage script - this will have password for staging environment
+stage

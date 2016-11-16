@@ -1,0 +1,7 @@
+#!/bin/bash
+# @IMPORTANT - you MUST create  the file private/vars with the following content:
+# export MYSQL_PW="{password}"
+# Include private variables
+./private/vars
+# Run docker image
+docker run -p 8086:3306 -e MYSQL_ROOT_PASSWORD=$MYSQL_PW -d --name=wp-mysql-stg uchilaka/wp-mysql:dev
