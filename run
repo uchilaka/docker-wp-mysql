@@ -4,4 +4,4 @@
 # Include private variables
 ./private/vars
 # Run docker image
-docker run -p 8086:3306 -e MYSQL_ROOT_PASSWORD=$MYSQL_PW -d --name=wp-mysql-stg uchilaka/wp-mysql:dev
+docker run -p 3336:3306 -e MYSQL_ROOT_PASSWORD=$MYSQL_PW --name=wp-mysql-stg -d uchilaka/wp-mysql:dev
