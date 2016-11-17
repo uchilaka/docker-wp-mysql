@@ -1,0 +1,1 @@
+This location will contain an instance directory that will be mounted @ /var/lib/mysql for storing all database content for the container

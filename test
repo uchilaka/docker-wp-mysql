@@ -1,0 +1,6 @@
+#!/bin/bash
+DATAPATH=$(PWD)/data/mysql_$(date "+%Y%m%d_%H%m")
+LOGFILE=$(PWD)/logs/$(date "+%Y%m%d_%H00").txt
+# log location for current container
+logger -s "Will persist (latest) container app data @ $DATAPATH..." 2>> $LOGFILE
+

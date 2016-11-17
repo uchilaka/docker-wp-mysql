@@ -1,3 +1,5 @@
 #!/bin/bash
 docker stop wp-mysql-stg
 docker rm wp-mysql-stg
+# for production
+#docker stop wp-mysql && docker rm wp-mysql
