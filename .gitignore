@@ -6,3 +6,7 @@ stage
 # Ignore mounted storage 
 data/*
 !data/README
+
+# Ignore logs 
+logs/*
+!logs/README
