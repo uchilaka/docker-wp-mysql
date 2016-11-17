@@ -1,6 +1,16 @@
 #!/bin/bash
-DATAPATH=$(PWD)/data/mysql_$(date "+%Y%m%d_%H%m")
+#DATAPATH=$(PWD)/data/mysql_$(date "+%Y%m%d_%H%M")
+DATAPATH=$(PWD)/data/wp-mysql-stg
 LOGFILE=$(PWD)/logs/$(date "+%Y%m%d_%H00").txt
-# log location for current container
-logger -s "Will persist (latest) container app data @ $DATAPATH..." 2>> $LOGFILE
+# log location for current container - SUCCESS
+#logger -s "Will persist (latest) container app data @ $DATAPATH..." 2>> $LOGFILE
+
+DATAPATH=$(PWD)/data/wp-mysql-stg
+if [ -d $DATAPATH ]; then 
+    BK_DATAPATH="${DATAPATH}_"$(date "+%Y%m%d_%H%M")
+    echo "Backup data path for wp-mysql container -> $BK_DATAPATH"
+    # backup data directory
+    cp -R $DATAPATH $BK_DATAPATH
+    echo "Valid data directory!"
+fi
 
