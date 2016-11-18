@@ -1,4 +1,5 @@
-FROM mysql/mysql-server:5.7
+FROM mysql:latest
+#FROM mysql/mysql-server:5.7
 #FROM mysql/mysql-server:5.6
 
 RUN groupadd admin 

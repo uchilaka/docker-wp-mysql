@@ -6,7 +6,8 @@ stage
 # Ignore mounted storage 
 data/*
 !data/README
+!data/wp-mysql-stg/README
 
-# Ignore logs 
+# Ignore logs
 logs/*
 !logs/README
