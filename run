@@ -1,8 +1,29 @@
 #!/bin/bash
 # @IMPORTANT - you MUST create  the file private/vars with the following content:
 # export MYSQL_PW="{password}"
+WDIR=.
+DATADIR=$WDIR/data/mysql
+CONF=$WDIR/private/vars.conf 
+LOGFILE=$(PWD)/logs/$(date "+%Y%m%d_%H00").txt
+PRIVDIR=$WDIR/private
+
+if ! [ -f $CONF ]; then 
+    # Create config file 
+    if ! [ -d $PRIVDIR ]; then 
+        logger -s "Creating $PRIVDIR..."
+        mkdir $PRIVDIR
+    fi 
+    cp $WDIR/vars-sample.conf $PRIVDIR/vars.conf
+fi
+
+# Make sure directory for mysql data exists
+if ! [ -d $DATADIR ]; then 
+    mkdir -p $DATADIR
+fi
+
 # Include private variables
-./private/vars
+source $CONF
+
 # Run docker image
 docker run -p 8086:3306 \
 -v ./data/mysql:/var/lib/mysql \

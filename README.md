@@ -2,6 +2,7 @@
 Docker MySQL Server image configurations for docker wordpress stages
 
 ## Setup
+- Create the following directory relative to the root of the project: `./data/mysql`
 - Make sure you create the following file relative to the root directory of the project: `./private/vars.conf`
 - In the `vars.conf` file above, input the following code:
 
