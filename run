@@ -21,6 +21,10 @@ if ! [ -d $DATADIR ]; then
     mkdir -p $DATADIR
 fi
 
+if [ -z $MYSQL_INSTANCE_NAME ]; then 
+    MYSQL_INSTANCE_NAME="wp-mysql"
+fi
+
 # Include private variables
 source $CONF
 
@@ -28,5 +32,5 @@ source $CONF
 docker run -p 8086:3306 \
 -v $DATADIR:/var/lib/mysql \
 -e MYSQL_ROOT_PASSWORD=$MYSQL_PW \
---name=wp-mysql \
+--name=$MYSQL_INSTANCE_NAME \
 -d uchilaka/wp-mysql:dev
