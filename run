@@ -1,7 +1,11 @@
 #!/bin/bash
 # @IMPORTANT - you MUST create  the file private/vars with the following content:
 # export MYSQL_PW="{password}"
-WDIR=$(pwd)
+WDIR=$(echo ~/Developer/Docker/wp-mysql)
+if ! [ -d $WDIR ]; then 
+    WDIR = "/opt/containers/wp-mysql"
+fi
+#WDIR=$(pwd)
 DATADIR=$WDIR/data/mysql
 CONF=$WDIR/private/vars.conf 
 LOGFILE=$(pwd)/logs/$(date "+%Y%m%d_%H00").txt
