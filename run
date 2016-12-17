@@ -3,7 +3,7 @@
 # export MYSQL_PW="{password}"
 WDIR=$(echo ~/Developer/Docker/wp-mysql)
 if ! [ -d $WDIR ]; then 
-    WDIR = "/opt/containers/wp-mysql"
+    WDIR="/opt/containers/wp-mysql"
 fi
 #WDIR=$(pwd)
 DATADIR=$WDIR/data/mysql
