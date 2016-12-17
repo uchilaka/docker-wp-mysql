@@ -33,4 +33,5 @@ docker run -p 8086:3306 \
 -v $DATADIR:/var/lib/mysql \
 -e MYSQL_ROOT_PASSWORD=$MYSQL_PW \
 --name=$MYSQL_INSTANCE_NAME \
+--restart unless-stopped \
 -d uchilaka/wp-mysql:dev
