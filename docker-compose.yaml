@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  wp-mysql:
+    container_name: wp-mysql
+    ports:
+      - 8086:3306
+    image: mysql/mysql-server:5.7
+    # Test to see if double quotes are included in password - might be source of issue
+    # environment:
+    #   - MYSQL_ROOT_PASSWORD="Spl3sh27?"
+    #   - MYSQL_DATABASE="uc-wordpress"
+    environment:
+      MYSQL_ROOT_PASSWORD: Spl3sh27?
+      MYSQL_DATABASE: uc-wordpress
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./conf.d:/etc/mysql/conf.d
+    restart: unless-stopped

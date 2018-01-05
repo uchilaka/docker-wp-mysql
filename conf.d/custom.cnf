@@ -1,0 +1,8 @@
+#/etc/mysql/conf.d/custom.cnf
+[mysqld]
+#
+# This will restrict binding to local server
+#bind-address=127.0.0.1
+#
+# This allows remote connection
+bind-address=0.0.0.0
