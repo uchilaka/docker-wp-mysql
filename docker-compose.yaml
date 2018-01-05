@@ -13,6 +13,7 @@ services:
       # MYSQL_USER: wp-user
       # MYSQL_PASSWORD: Spl3sh27?
     volumes:
-      - ./data/mysql:/var/lib/mysql
+      #- ./data/mysql:/var/lib/mysql
+      - ./data/wp-mysql-stg:/var/lib/mysql
       - ./conf.d:/etc/mysql/conf.d
     restart: unless-stopped
