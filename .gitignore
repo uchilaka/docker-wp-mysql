@@ -6,6 +6,8 @@ stage
 
 # Ignore mounted storage 
 data/*
+!data/mysql-20170105
+!data/wp-mysql-stg
 !data/README
 !data/wp-mysql-stg/README
 
