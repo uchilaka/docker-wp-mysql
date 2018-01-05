@@ -7,13 +7,12 @@ services:
       - 8086:3306
       - 8087:33060
     image: mysql/mysql-server:5.7
-    # Test to see if double quotes are included in password - might be source of issue
-    # environment:
-    #   - MYSQL_ROOT_PASSWORD="Spl3sh27?"
-    #   - MYSQL_DATABASE="uc-wordpress"
     environment:
+      # Test to see if double quotes are included in password - might be source of issue
       MYSQL_ROOT_PASSWORD: Spl3sh27?
       MYSQL_DATABASE: uc-wordpress
+      MYSQL_USER: crud
+      MYSQL_PASSWORD: Spl3sh27?
     volumes:
       - ./data/mysql:/var/lib/mysql
       - ./conf.d:/etc/mysql/conf.d
