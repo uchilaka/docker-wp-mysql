@@ -1,12 +1,12 @@
-FROM mysql:latest
-#FROM mysql/mysql-server:5.7
+FROM mysql/mysql-server:5.7
+#FROM mysql:latest
 #FROM mysql/mysql-server:5.6
 
 RUN groupadd admin 
 
 # setup init user
 RUN useradd --user-group --create-home --shell /bin/bash localadmin &&\
-usermod -aG admin localadmin && chown -R localadmin:localadmin /home/localadmin
+    usermod -aG admin localadmin && chown -R localadmin:localadmin /home/localadmin
 
 ENV HOME=/home/localadmin
 
