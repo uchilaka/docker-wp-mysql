@@ -5,7 +5,7 @@ services:
     container_name: wp-mysql
     ports:
       - 8086:3306
-    image: mysql/mysql-server:5.6
+    image: mysql/mysql-server:5.7
     environment:
       # Test to see if double quotes are included in password - might be source of issue
       MYSQL_ROOT_PASSWORD: Spl3sh27?
