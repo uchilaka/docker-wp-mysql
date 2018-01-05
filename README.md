@@ -1,8 +1,11 @@
-# docker-wp-mysql
+# MySQL Container for Wordpress `docker-wp-mysql`
 Docker MySQL Server image configurations for docker wordpress stages
 
 ## Documentation
 Details about configuring this container: [https://hub.docker.com/_/mysql/]()
+
+## Timezone Settings
+Complete more research for how to install timezone tables from resource files at this URL: [https://dev.mysql.com/downloads/timezones.html](). Files for `5.7` have been downloaded to `./res/timezone_2017c_leaps_sql.zip` (NON-POSIX, with leap seconds).
 
 ## Setup
 - Create the following directory relative to the root of the project: `./data/mysql`
