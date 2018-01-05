@@ -5,6 +5,7 @@ services:
     container_name: wp-mysql
     ports:
       - 8086:3306
+      - 8087:33060
     image: mysql/mysql-server:5.7
     # Test to see if double quotes are included in password - might be source of issue
     # environment:

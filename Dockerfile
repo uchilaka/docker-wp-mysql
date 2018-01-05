@@ -8,7 +8,7 @@ RUN groupadd admin
 RUN useradd --user-group --create-home --shell /bin/bash localadmin &&\
     usermod -aG admin localadmin && chown -R localadmin:localadmin /home/localadmin
 
-ENV HOME=/home/localadmin
+#ENV HOME=/home/localadmin
 
 # @WARNING Be wary of changing the WORKDIR
 # Bundle app source 
