@@ -11,7 +11,7 @@ services:
       # Test to see if double quotes are included in password - might be source of issue
       MYSQL_ROOT_PASSWORD: Spl3sh27?
       MYSQL_DATABASE: uc-wordpress
-      MYSQL_USER: crud
+      MYSQL_USER: wp-user
       MYSQL_PASSWORD: Spl3sh27?
     volumes:
       - ./data/mysql:/var/lib/mysql
